@@ -1,0 +1,111 @@
+{
+    "genericErrMsg": {
+        "200": "Success.",
+        "204": "Data Not Found successfully.",
+        "400": "Value in any of the mandatory field's is missing.",
+        "401": "Unauthorised token",
+        "403": "Invalid Call, Access Token is not Expired.",
+        "404": "Data you have requsted is Not Found.",
+        "405": "action not allowed",
+        "406": "Invalid Call, Access Token Expired.",
+        "409": "Invalid password",
+        "417": "Invalid Refresh Token Passed.",
+        "440": "Token Expire.",
+        "498": "Invalid Token.",
+        "500": "An unknown error has occurred.",
+        "501": "Implement  error."
+    },
+    "header": {
+        "Authorization": "Authorization token, Ex: Key",
+        "Language": "Language of response, Ex: en"
+    },
+    "activityLog": {
+        "Get": {
+            "ApiDescription": "This API is use to get all or specifice types details.",
+            "fieldsDescription": {
+                "description": "description of log",
+                "type":"select the type",
+                "status": "status of the type Ex : In/Out",
+                "itemId":"Unique of id of item Ex :834jffiuifbfg748",
+                "createId":"Unique of id of createId Ex :834jffiuifbfg748",
+                "fromDate":"from date",
+                "page": "Please enetr valid page",
+                "limit": "please enter valid limit",
+                "toDate":"to date",
+                "activityLogId":"Unique of id of activityLog Ex :834jffiuifbfg748"
+            },
+            "error": {
+
+            }
+        }
+    },
+    "auth": {
+        "Post": {
+            "ApiDescription": "This API is use for signIn admin-user into system.",
+            "fieldsDescription": {
+                "phoneNumber": "Your phoneNumber for contact, Ex: 1234567890",
+                "type":"User Type Ex:delivery,admin,user"
+            },
+            "error": {
+
+            }
+        }
+    },
+    "users": {
+        "Post": {
+            "ApiDescription": "This API is use for find or check user is already exists or not.",
+            "fieldsDescription": {
+                "phoneNumber": "Your phoneNumber for contact, Ex: 1234567890",
+                "email": "Your email, Ex: abc@gmail.com",
+                "name" : "Your Name, Ex: Xyz",
+                "type":"User Type Ex:delivery,superadmin",
+                "role":"User Role Ex:admin,superadmin,master,cutter",
+                "image" :"URL of User Profile Ex :image.png",
+                "status" : "status of user Ex : true/false",
+                "gender":"gender of the user", 
+                "userId" : "Unique of id of user Ex :834jffiuifbfg748",
+                "password":"password of the user",
+                "permissions" : "Array of user Permissions Ex :[{ addproduct:true,updateitem:false }]"
+            },
+            "error": {
+                "required": "required field is missing",
+                "PhoneNumberExists": "This Phone Number Is already Exists In our database",
+                "EmailExists": "This Email Is already Exists",
+                "isfalse":"user is currently unavailable"
+            }
+        },
+        "Get": {
+            "ApiDescription": "This API is use for find or get user.",
+            "fieldsDescription": {
+                "phoneNumber": "Your phoneNumber for contact, Ex: 1234567890",
+                "email": "Your email, Ex: abc@gmail.com",
+                "name" : "Your Name, Ex: Xyz",
+                "type":"User Type Ex:delivery,superadmin",
+                "role":"User Role Ex:admin,superadmin,master,cutter",
+                "status" : "status of user Ex : true/false",
+                "page": "Please enetr valid page",
+                "gender":"gender of the user",
+                "limit": "please enter valid limit",
+                "userId" : "Unique of id of user Ex :834jffiuifbfg748",
+                "password":"password of the user",
+                "permissions" : "Array of user Permissions Ex :[{ addproduct:true,updateitem:false }]"
+            },
+            "error": {
+
+            }
+        }
+    },
+    "signIn": {
+        "Post": {
+            "ApiDescription": "This API is use for signIn user into system.",
+            "fieldsDescription": {
+                "userId" : "Unique of id of user Ex :834jffiuifbfg748",
+                "email" : "Unique email of user",
+                "otp": "Your otp, Ex: 1111"
+            },
+            "error": {
+                "passwordInvalid":"Invalid Password"
+            }
+        }
+    }
+}
